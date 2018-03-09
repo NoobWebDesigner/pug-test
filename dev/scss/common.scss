@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+/* test */
+
+@import '_normalize';
+
+@font-face {
+  font-family: "Yu Gothic";
+  src: local("Yu Gothic Medium");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Yu Gothic";
+  src: local("Yu Gothic Medium");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Yu Gothic";
+  src: local("Yu Gothic Medium");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Yu Gothic";
+  src: local("Yu Gothic Medium");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Yu Gothic";
+  src: local("Yu Gothic Bold");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Helvetica Neue";
+  src: local("Helvetica Neue Regular");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Helvetica Neue";
+  src: local("Helvetica Neue Regular");
+  font-weight: 200;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, Verdana, Meiryo, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* IE10対策 */
+@media all and (-ms-high-contrast: none) {
+  body {
+    font-family: Verdana, Meiryo, sans-serif;
+  }
+}
+
+header{
+  text-align: center;
+}
+.gNav{
+  overflow: hidden;
+  ul{
+    padding: 0;
+    display: flex;
+    li{
+      width: 20%;
+      text-align: center;
+      list-style: none;
+      border: 1px solid #ccc;
+      border-width: 1px 1px 1px 0;
+      &:last-child{
+        border-width: 1px 0;
+      }
+      a{
+        display: block;
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        vertical-align: middle;
+        text-decoration: none;
+        color: #333;
+      }
+    }
+  }
+}
+.container{
+  max-width: 960px;
+  width: 94%;
+  margin: auto;
+}
+
+.footerNav{
+  ul{
+    text-align: center;
+    letter-spacing: -.4em;
+    li{
+      display: inline-block;
+      letter-spacing: normal;
+      margin: 0 5px;
+    }
+  }
+}
