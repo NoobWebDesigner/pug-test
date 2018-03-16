@@ -1,0 +1,27 @@
+include _mixin.pug
+
+doctype html
+html(lang="ja")
+  head
+    meta(charset="utf-8")
+    meta(name="author" content="pug")
+    meta(name="discription" content="PUGを使ったHTMLページ作成のテストです")
+    meta(name="format-detection" content="telephone=no,address=no,email=no")
+    meta(name="viewport" content="width=device-width,initial-scale=1.0")
+    link(rel="publisher" href="//plus.google.com/00000000000")
+    block canonical
+    link(rel="icon" href="icon/favicon.ico")
+    link(rel="apple-touch-icon" href="icon/icon.png")
+    link(rel="stylesheet" href="css/common.css")
+    block title
+  body
+    header
+      block pageTtl
+      block leadTxt
+    +gNav
+    block mainVisual
+    .container
+      block container
+      +footerNav
+      footer
+        small copyright &copy;PUGテスト

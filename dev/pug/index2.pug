@@ -1,0 +1,50 @@
+include lib/_mixin.pug
+
+doctype html
+html(lang="ja")
+  head
+    meta(charset="utf-8")
+    meta(name="author" content="pug")
+    meta(name="discription" content="PUGを使ったHTMLページ作成のテストです")
+    meta(name="format-detection" content="telephone=no,address=no,email=no")
+    meta(name="viewport" content="width=device-width,initial-scale=1.0")
+    link(rel="publisher" href="//plus.google.com/00000000000")
+    link(rel="canonical" href="https://pug-test.com/index.html")
+    link(rel="icon" href="icon/favicon.ico")
+    link(rel="apple-touch-icon" href="icon/icon.png")
+    link(rel="stylesheet" href="css/common.css")
+    title PUGテストページ
+  body
+    header
+      h1 PUGテスト
+      p PUGを使ったHTMページ作成のテストです
+    +gNav
+    .mainVisual
+      img(src="https://placehold.jp/1280x640.png")
+    .container
+      main
+        article.info
+          h2 Information
+          section
+            h3 PUGのテスト
+            p あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+          section
+            h3 PUGのテスト
+            p あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+          section
+            h3 PUGのテスト
+            p あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
+        ul.banner
+          li
+            a(href="")
+              img(src="https://placehold.jp/286x86.png", alt="バナー1")
+          li
+            a(href="")
+              img(src="https://placehold.jp/286x86.png", alt="バナー2")
+          li
+            a(href="")
+              img(src="https://placehold.jp/286x86.png", alt="バナー3")
+      +footerNav
+      footer
+        small copyright &copy;PUGテスト
+
