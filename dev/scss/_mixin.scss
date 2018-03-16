@@ -1,0 +1,24 @@
+@mixin widtnPercent( $parentPxWidth, $pxWidth ){
+    width: floor((( $pxWidth / $parentPxWidth ) * 10000% )) / 100;
+}
+
+$breakpoints: (
+  'xs': 'screen and (max-width: 400px)',
+  's': 'screen and (max-width: 640px)',
+  'm': 'screen and (max-width: 768px)',
+  'xl': 'screen and (max-width: 960px)',
+) !default;
+
+@mixin mq($breakpoint: s) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin autoWidth(){
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+

@@ -200,11 +200,17 @@ header {
   text-align: center;
 }
 
+header h1 {
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.84);
+}
+
 .gNav {
   overflow: hidden;
 }
 
 .gNav ul {
+  margin-bottom: 0;
   padding: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -234,13 +240,68 @@ header {
   color: #333;
 }
 
+.mainVisual {
+  text-align: center;
+}
+
+.mainVisual img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
 .container {
   max-width: 960px;
   width: 94%;
   margin: auto;
 }
 
+.container main {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 640px) {
+  .container main {
+    display: block;
+  }
+}
+
+.container main .info {
+  width: 66.66%;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 640px) {
+  .container main .info {
+    width: 100%;
+  }
+}
+
+.container main .banner {
+  width: 29.79%;
+  margin-left: auto;
+  padding: 0;
+  list-style: none;
+}
+
+.container main .banner img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 640px) {
+  .container main .banner {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 .footerNav ul {
+  padding: 0;
   text-align: center;
   letter-spacing: -.4em;
 }
@@ -249,6 +310,10 @@ header {
   display: inline-block;
   letter-spacing: normal;
   margin: 0 5px;
+}
+
+footer {
+  text-align: center;
 }
 
 /*# sourceMappingURL=common.css.map */

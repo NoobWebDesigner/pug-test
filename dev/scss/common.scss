@@ -3,6 +3,7 @@
 /* test */
 
 @import '_normalize';
+@import '_mixin';
 
 @font-face {
   font-family: "Yu Gothic";
@@ -55,10 +56,15 @@ body {
 
 header{
   text-align: center;
+  h1{
+    font-size: 2rem;
+    color: rgba(0,0,0,.84);
+  }
 }
 .gNav{
   overflow: hidden;
   ul{
+    margin-bottom: 0;
     padding: 0;
     display: flex;
     li{
@@ -82,14 +88,46 @@ header{
     }
   }
 }
+.mainVisual{
+  text-align: center;
+  img{
+    @include autoWidth;
+  }
+}
 .container{
   max-width: 960px;
   width: 94%;
   margin: auto;
+  main{
+    display: flex;
+    @include mq(s) {
+      display: block;
+    }
+    .info{
+      @include widtnPercent(960, 640);
+      margin-right: auto;
+      @include mq(s) {
+        width: 100%;
+      }
+    }
+    .banner{
+      @include widtnPercent(960, 286);
+      margin-left: auto;
+      padding: 0;
+      list-style: none;
+      img{
+        @include autoWidth;
+      }
+      @include mq(s) {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
 }
-
 .footerNav{
   ul{
+    padding: 0;
     text-align: center;
     letter-spacing: -.4em;
     li{
@@ -98,4 +136,7 @@ header{
       margin: 0 5px;
     }
   }
+}
+footer{
+  text-align: center;
 }
